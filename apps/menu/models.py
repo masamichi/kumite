@@ -18,3 +18,6 @@ class Tea(models.Model):
 
     name = models.CharField("名称", max_length=255)
     kind = models.CharField("種類", max_length = 255, choices=TEA_KINDS)
+
+
+
