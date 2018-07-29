@@ -6,6 +6,8 @@ TEA_KINDS = (
     ("japanese", "日本茶")
 )
 
+a_unused_variable = ""
+
 class TeaManager(models.Manager):
     def count_each_kind(self):
         result = self.values_list("kind").annotate(
@@ -17,7 +19,4 @@ class Tea(models.Model):
     objects = TeaManager()
 
     name = models.CharField("名称", max_length=255)
-    kind = models.CharField("種類", max_length = 255, choices=TEA_KINDS)
-
-
-
+    kind = models.CharField("種類", max_length=255, choices=TEA_KINDS)
