@@ -17,4 +17,4 @@ class Tea(models.Model):
     objects = TeaManager()
 
     name = models.CharField("名称", max_length=255)
-    kind = models.CharField("種類", max_length=255, choices=TEA_KINDS)
+    kind = models.CharField("種類", max_length = 255, choices=TEA_KINDS)
