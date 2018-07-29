@@ -6,8 +6,6 @@ TEA_KINDS = (
     ("japanese", "日本茶")
 )
 
-a_unused_variable = ""
-
 class TeaManager(models.Manager):
     def count_each_kind(self):
         result = self.values_list("kind").annotate(
