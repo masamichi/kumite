@@ -14,5 +14,5 @@ class TeaSearchForm(forms.Form):
             return self.cleaned_data
 
         if not self.cleaned_data["name"] and not self.cleaned_data["kind"]:
-            raise forms.ValidationError(”名称と種類のどちらかは入力してください”)
+            raise forms.ValidationError('名称と種類のどちらかは入力してください')
         return self.cleaned_data
