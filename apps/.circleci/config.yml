@@ -1,0 +1,15 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6
+    steps:
+      - checkout
+      - run: |
+        python3.6 -m venv venv
+        source ./venv/bin/activate
+        pip install django=1.11.7
+        cd apps
+
+        python manage.py migrate
+        python manage.py test
